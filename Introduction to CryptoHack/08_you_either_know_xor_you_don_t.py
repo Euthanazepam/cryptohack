@@ -3,7 +3,9 @@ from pwn import xor
 
 def get_flag() -> str:
     """
-    https://cryptohack.org/courses/intro/xorkey1/
+    Returns the challenge flag https://cryptohack.org/courses/intro/xorkey1/
+
+    :return: Flag
     """
 
     hex_string = '0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104'

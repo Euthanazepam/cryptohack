@@ -3,7 +3,9 @@ from Crypto.Util.number import long_to_bytes
 
 def get_flag() -> str:
     """
-    https://cryptohack.org/courses/intro/enc4/
+    Returns the challenge flag https://cryptohack.org/courses/intro/enc4/
+
+    :return: Flag
     """
 
     integer = 11515195063862318899931685488813747395775516287289682636499965282714637259206269

@@ -3,7 +3,9 @@ from pwn import xor
 
 def get_flag() -> str:
     """
-    https://cryptohack.org/courses/intro/xor0/
+    Returns the challenge flag https://cryptohack.org/courses/intro/xor0/
+
+    :return: Flag
     """
 
     message = 'label'
@@ -18,6 +20,12 @@ def get_flag() -> str:
 
 
 def get_flag_own_solution() -> str:
+    """
+    Returns the challenge flag https://cryptohack.org/courses/intro/xor0/
+
+    :return: Flag
+    """
+
     message = 'label'
     integer = 13
 
