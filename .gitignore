@@ -17,4 +17,5 @@ virtualenv/
 
 # Temp files and dirs
 *.key
+*.png
 *.txt
