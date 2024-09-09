@@ -1,6 +1,8 @@
 def get_flag() -> int:
     """
-    https://cryptohack.org/courses/modular/root0/
+    Returns the challenge flag https://cryptohack.org/courses/modular/root0/
+
+    :return: Flag
     """
 
     p = 29
@@ -8,7 +10,7 @@ def get_flag() -> int:
     x = []  # List of square roots
 
     for a in range(0, p + 1):
-        if (a ** 2) % p in ints:
+        if pow(a, 2, p) in ints:
             x.append(a)
 
     return min(x)

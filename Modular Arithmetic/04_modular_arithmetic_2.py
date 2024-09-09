@@ -1,6 +1,8 @@
 def get_flag() -> int:
     """
-    https://cryptohack.org/courses/modular/ma1/
+    Returns the challenge flag https://cryptohack.org/courses/modular/ma1/
+
+    :return: Flag
     """
 
     a = 273246787654
@@ -11,7 +13,7 @@ def get_flag() -> int:
     a^(p-1) ≡ 1 mod p <=> a^(p-1) % p = 1
     """
 
-    return (a ** (p - 1)) % p
+    return pow(a, p - 1, p)
 
 
 if __name__ == '__main__':

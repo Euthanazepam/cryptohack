@@ -1,6 +1,8 @@
 def get_flag() -> int:
     """
-    https://cryptohack.org/courses/modular/mdiv/
+    Returns the challenge flag https://cryptohack.org/courses/modular/mdiv/
+
+    :return: Flag
     """
 
     a = 3
@@ -15,7 +17,7 @@ def get_flag() -> int:
     Then a^(-1) = a^(p - 2) % p
     """
 
-    return (a ** (p - 2)) % p
+    return pow(a, p - 2, p)
 
 
 if __name__ == '__main__':
