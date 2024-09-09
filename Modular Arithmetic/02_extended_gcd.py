@@ -1,6 +1,8 @@
 def get_flag() -> int:
     """
-    https://cryptohack.org/courses/modular/egcd/
+    Returns the challenge flag https://cryptohack.org/courses/modular/egcd/
+
+    :return: Flag
     """
 
     a = 26513
