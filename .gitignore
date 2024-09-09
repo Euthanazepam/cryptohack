@@ -14,3 +14,6 @@ ENV/
 env.bak/
 venv.bak/
 virtualenv/
+
+# Temp files and dirs
+*.txt
