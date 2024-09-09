@@ -16,4 +16,5 @@ venv.bak/
 virtualenv/
 
 # Temp files and dirs
+*.key
 *.txt
