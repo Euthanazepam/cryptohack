@@ -1,4 +1,5 @@
 from Crypto.Util.number import long_to_bytes
+from os.path import exists
 from requests import get
 
 base_url = "https://cryptohack.org"
@@ -31,7 +32,8 @@ def get_flag() -> str:
     :return: Flag
     """
 
-    download_output_txt()
+    if not exists(f"{filename}.{filetype}"):
+        download_output_txt()
 
     try:
         with open(f"Public-Key Cryptography/{filename}.{filetype}", "r") as f:
