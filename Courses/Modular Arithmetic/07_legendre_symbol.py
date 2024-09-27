@@ -43,7 +43,7 @@ def get_flag() -> int:
 
     p = int(output[0][4:].replace('\n', '').rstrip())
 
-    # Convert all strings in a list to int
+    # Convert all strings in a list to int.
     ints = list(map(int, output[2][8:-2].replace('\n', '').rstrip().split(', ')))
 
     for a in ints:

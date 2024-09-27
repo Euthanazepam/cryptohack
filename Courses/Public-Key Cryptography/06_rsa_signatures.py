@@ -43,15 +43,15 @@ def get_flag() -> int:
         with open(f"{filename}.{filetype}", "r") as f:
             key = f.readlines()
 
-    N = int(key[0][4:].replace('\n', ''))
+    n = int(key[0][4:].replace('\n', ''))
     d = int(key[1][4:].replace('\n', ''))
 
     m = "crypto{Immut4ble_m3ssag1ng}"
 
-    # Calculate the SHA256 hash of the message
-    H = SHA256.new(m.encode()).digest()
+    # Calculate the SHA256 hash of the message.
+    h = SHA256.new(m.encode()).digest()
 
-    s = pow(bytes_to_long(H), d, N)
+    s = pow(bytes_to_long(h), d, n)
 
     return s
 

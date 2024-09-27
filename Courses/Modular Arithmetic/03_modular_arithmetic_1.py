@@ -1,11 +1,11 @@
 def get_flag() -> int:
     """
     Returns the challenge flag https://cryptohack.org/courses/modular/ma0/
+    If a ≡ b mod m, then b = a % m
 
     :return: Flag
     """
 
-    # If a ≡ b mod m, then b = a % m
     x = 11 % 6
     y = 8146798528947 % 17
 

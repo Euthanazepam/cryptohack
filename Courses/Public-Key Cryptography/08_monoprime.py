@@ -28,6 +28,7 @@ def download_output_txt() -> None:
 def get_flag() -> str:
     """
     Returns the challenge flag https://cryptohack.org/courses/public-key/monoprime/
+    If n is a prime, then φ(n) = n - 1
 
     :return: Flag
     """
@@ -42,16 +43,15 @@ def get_flag() -> str:
         with open(f"{filename}.{filetype}", "r") as f:
             output = f.readlines()
 
-    N = int(output[0][4:].replace('\n', '').rstrip())
+    n = int(output[0][4:].replace('\n', '').rstrip())
     e = int(output[1][4:].replace('\n', '').rstrip())
     c = int(output[2][5:].replace('\n', '').rstrip())
 
-    # If N is a prime, then φ(N) = N - 1
-    phi = N - 1
+    phi = n - 1
 
     d = pow(e, -1, phi)
 
-    m = pow(c, d, N)
+    m = pow(c, d, n)
 
     flag = long_to_bytes(m).decode()
 

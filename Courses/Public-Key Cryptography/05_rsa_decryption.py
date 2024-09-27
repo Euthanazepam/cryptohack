@@ -6,7 +6,7 @@ def get_flag() -> int:
     """
 
     # The task uses a private key from https://cryptohack.org/courses/public-key/rsa_starter_4/
-    N = 882564595536224140639625987659416029426239230804614613279163
+    n = 882564595536224140639625987659416029426239230804614613279163
     e = 65537
 
     p = 857504083339712752489993810777
@@ -16,7 +16,7 @@ def get_flag() -> int:
 
     c = 77578995801157823671636298847186723593814843845525223303932
 
-    return pow(c, d, N)
+    return pow(c, d, n)
 
 
 if __name__ == "__main__":

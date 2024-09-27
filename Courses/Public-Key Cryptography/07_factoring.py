@@ -8,10 +8,10 @@ def get_flag() -> int:
     :return: Flag
     """
 
-    N = 510143758735509025530880200653196460532653147
+    n = 510143758735509025530880200653196460532653147
 
-    # Use http://factordb.com to factorize N
-    f = FactorDB(N)
+    # Use http://factordb.com to factorize n
+    f = FactorDB(n)
     f.connect()
     p, q = f.get_factor_list()
 

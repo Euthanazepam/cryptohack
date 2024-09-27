@@ -12,9 +12,9 @@ def get_flag() -> int:
 
     e = 65537
 
-    N = p * q
+    n = p * q
 
-    return pow(m, e, N)
+    return pow(m, e, n)
 
 
 if __name__ == "__main__":

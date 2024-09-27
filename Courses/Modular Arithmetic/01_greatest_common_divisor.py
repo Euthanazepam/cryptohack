@@ -1,7 +1,7 @@
 def get_flag() -> int:
     """
     Returns the GCD of two numbers.
-    https://cryptohack.org/courses/modular/gcd/
+    Task page — https://cryptohack.org/courses/modular/gcd/
 
     :return: GCD
     """
