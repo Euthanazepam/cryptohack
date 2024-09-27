@@ -4,9 +4,9 @@ def get_flag() -> int:
     See https://algorithmica.org/ru/reciprocal.
     If:
         a — integer,
-        a^(-1) — inverse of an element a,
+        a⁻¹ — inverse of an element a,
         p — prime,
-    Then a^(-1) = a^(p - 2) % p
+    Then a⁻¹ = a⁽ᴾ⁻²⁾ % p
 
     :return: Flag
     """

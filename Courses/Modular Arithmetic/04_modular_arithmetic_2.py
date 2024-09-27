@@ -2,7 +2,7 @@ def get_flag() -> int:
     """
     Returns the challenge flag https://cryptohack.org/courses/modular/ma1/
     According to Fermat's little theorem:
-    a^(p-1) ≡ 1 mod p <=> a^(p-1) % p = 1
+    a⁽ᴾ⁻¹⁾ ≡ 1 mod p <=> a⁽ᴾ⁻¹⁾ % p = 1
 
     :return: Flag
     """
