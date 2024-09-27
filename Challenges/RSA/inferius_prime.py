@@ -1,4 +1,5 @@
 from factordb.factordb import FactorDB
+from os.path import exists
 from requests import get
 
 base_url = "https://cryptohack.org"
@@ -31,24 +32,25 @@ def get_flag() -> str:
     :return: Flag
     """
 
-    download_output_txt()
+    if not exists(f"{filename}.{filetype}"):
+        download_output_txt()
 
     with open(f"{filename}.{filetype}", "r") as f:
             output = f.readlines()
 
-    N = int(output[0][4:].replace('\n', '').rstrip())
+    n = int(output[0][4:].replace('\n', '').rstrip())
     e = int(output[1][4:].replace('\n', '').rstrip())
     c = int(output[2][5:].replace('\n', '').rstrip())
 
     # Use http://factordb.com to factorize n
-    f = FactorDB(N)
+    f = FactorDB(n)
     f.connect()
     p, q = f.get_factor_list()
 
     phi = (p - 1) * (q - 1)
     d = pow(e, -1, phi)
 
-    m = pow(c, d, N)
+    m = pow(c, d, n)
 
     flag = m.to_bytes(c.bit_length() // 8, 'big')[2:].decode()
 

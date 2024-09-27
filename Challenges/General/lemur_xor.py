@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image
+from os.path import exists
 from requests import get
 
 base_url = "https://cryptohack.org"
@@ -32,20 +33,21 @@ def xor_images() -> None:
     Performing a visual XOR between the RGB bytes of the two images.
     """
 
-    download_images()
+    if not exists(f"{filenames[0]}") or not exists(f"{filenames[1]}"):
+        download_images()
 
-    # Open images
+    # Open images.
     img1 = Image.open(filenames[0])
     img2 = Image.open(filenames[1])
 
-    # Make into Numpy arrays
+    # Make into Numpy arrays.
     img1np = np.array(img1) * 255
     img2np = np.array(img2) * 255
 
-    # XOR with Numpy
+    # XOR with Numpy.
     result = np.bitwise_xor(img1np, img2np).astype(np.uint8)
 
-    # Convert back to PIL image and save
+    # Convert back to PIL image and save.
     Image.fromarray(result).save('result.png')
 
 
