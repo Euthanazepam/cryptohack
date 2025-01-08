@@ -37,10 +37,10 @@ def get_flag() -> int:
         download_private_key()
 
     try:
-        with open(f"Public-Key Cryptography/{filename}.{filetype}", "r") as f:
+        with open(f"Public-Key Cryptography/{filename}.{filetype}", 'r') as f:
             key = f.readlines()
     except FileNotFoundError:
-        with open(f"{filename}.{filetype}", "r") as f:
+        with open(f"{filename}.{filetype}", 'r') as f:
             key = f.readlines()
 
     n = int(key[0][4:].replace('\n', ''))

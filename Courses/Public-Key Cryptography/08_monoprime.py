@@ -37,10 +37,10 @@ def get_flag() -> str:
         download_output_txt()
 
     try:
-        with open(f"Public-Key Cryptography/{filename}.{filetype}", "r") as f:
+        with open(f"Public-Key Cryptography/{filename}.{filetype}", 'r') as f:
             output = f.readlines()
     except FileNotFoundError:
-        with open(f"{filename}.{filetype}", "r") as f:
+        with open(f"{filename}.{filetype}", 'r') as f:
             output = f.readlines()
 
     n = int(output[0][4:].replace('\n', '').rstrip())

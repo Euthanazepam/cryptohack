@@ -12,5 +12,5 @@ def get_flag() -> int:
     return min(x, y)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(get_flag())

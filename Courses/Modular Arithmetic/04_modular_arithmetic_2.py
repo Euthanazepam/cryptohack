@@ -13,5 +13,5 @@ def get_flag() -> int:
     return pow(a, p - 1, p)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(get_flag())

@@ -15,7 +15,7 @@ def decode_base64(encoded: str) -> dict:
     :return: json, decoded message
     """
 
-    flag = base64.b64decode(encoded.encode()).decode('utf-8')
+    flag = base64.b64decode(encoded.encode()).decode("utf-8")
 
     return {"decoded": flag}
 
@@ -28,7 +28,7 @@ def decode_bigint(encoded: str) -> dict:
     :return: json, decoded message
     """
 
-    flag = bytes.fromhex(encoded[2:]).decode('utf-8')
+    flag = bytes.fromhex(encoded[2:]).decode("utf-8")
 
     return {"decoded": flag}
 
@@ -41,7 +41,7 @@ def decode_hex(encoded: str) -> dict:
     :return: json, decoded message
     """
 
-    flag = bytes.fromhex(encoded).decode('utf-8')
+    flag = bytes.fromhex(encoded).decode("utf-8")
 
     return {"decoded": flag}
 

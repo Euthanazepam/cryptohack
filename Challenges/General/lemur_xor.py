@@ -48,7 +48,7 @@ def xor_images() -> None:
     result = np.bitwise_xor(img1np, img2np).astype(np.uint8)
 
     # Convert back to PIL image and save.
-    Image.fromarray(result).save('result.png')
+    Image.fromarray(result).save("result.png")
 
 
 if __name__ == "__main__":

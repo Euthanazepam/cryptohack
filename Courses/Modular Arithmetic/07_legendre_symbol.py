@@ -35,10 +35,10 @@ def get_flag() -> int:
         download_output_txt()
 
     try:
-        with open(f"Modular Arithmetic/{filename}.{filetype}", "r") as f:
+        with open(f"Modular Arithmetic/{filename}.{filetype}", 'r') as f:
             output = f.readlines()
     except FileNotFoundError:
-        with open(f"{filename}.{filetype}", "r") as f:
+        with open(f"{filename}.{filetype}", 'r') as f:
             output = f.readlines()
 
     p = int(output[0][4:].replace('\n', '').rstrip())

@@ -8,13 +8,13 @@ def get_flag() -> str:
     :return: Flag
     """
 
-    message = 'label'
+    message = "label"
     integer = 13
 
     message = message.encode()
     integer = integer.to_bytes()
 
-    flag = xor(message, integer).decode('utf-8')
+    flag = xor(message, integer).decode("utf-8")
 
     return flag
 
@@ -26,7 +26,7 @@ def get_flag_own_solution() -> str:
     :return: Flag
     """
 
-    message = 'label'
+    message = "label"
     integer = 13
 
     flag = ''
@@ -37,6 +37,6 @@ def get_flag_own_solution() -> str:
     return flag
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(get_flag())
     # print(get_flag_own_solution())

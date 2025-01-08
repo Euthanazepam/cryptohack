@@ -18,5 +18,5 @@ def get_flag() -> int:
     return a
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(get_flag())

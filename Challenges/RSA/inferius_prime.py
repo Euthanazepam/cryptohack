@@ -35,7 +35,7 @@ def get_flag() -> str:
     if not exists(f"{filename}.{filetype}"):
         download_output_txt()
 
-    with open(f"{filename}.{filetype}", "r") as f:
+    with open(f"{filename}.{filetype}", 'r') as f:
             output = f.readlines()
 
     n = int(output[0][4:].replace('\n', '').rstrip())
@@ -52,7 +52,7 @@ def get_flag() -> str:
 
     m = pow(c, d, n)
 
-    flag = m.to_bytes(c.bit_length() // 8, 'big')[2:].decode()
+    flag = m.to_bytes(c.bit_length() // 8, "big")[2:].decode()
 
     return flag
 
