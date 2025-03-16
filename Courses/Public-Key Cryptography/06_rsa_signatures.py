@@ -1,7 +1,7 @@
-from Crypto.Hash import SHA256
-from Crypto.Util.number import bytes_to_long
+from Crypto.Hash import SHA256  # pip install PyCryptodome
+from Crypto.Util.number import bytes_to_long    # pip install PyCryptodome
 from os.path import exists
-from requests import get
+from requests import get    # pip install requests
 
 base_url = "https://cryptohack.org"
 path = "static/challenges"

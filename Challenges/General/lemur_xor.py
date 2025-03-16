@@ -1,7 +1,7 @@
-import numpy as np
-from PIL import Image
+import numpy as np  # pip install numpy
+from PIL import Image   # pip install pillow
 from os.path import exists
-from requests import get
+from requests import get    # pip install requests
 
 base_url = "https://cryptohack.org"
 path = "static/challenges"

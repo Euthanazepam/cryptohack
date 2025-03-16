@@ -1,4 +1,4 @@
-from pwn import xor
+from pwn import xor # pip install pwntools
 
 
 def get_flag() -> str:

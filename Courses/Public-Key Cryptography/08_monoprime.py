@@ -1,6 +1,6 @@
-from Crypto.Util.number import long_to_bytes
+from Crypto.Util.number import long_to_bytes    # pip install PyCryptodome
 from os.path import exists
-from requests import get
+from requests import get    # pip install requests
 
 base_url = "https://cryptohack.org"
 path = "static/challenges"

@@ -1,4 +1,4 @@
-from factordb.factordb import FactorDB
+from factordb.factordb import FactorDB  # pip install factordb-python
 
 
 def get_flag() -> int:

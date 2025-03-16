@@ -1,4 +1,4 @@
-from Crypto.Util.number import long_to_bytes
+from Crypto.Util.number import long_to_bytes    # pip install PyCryptodome
 
 
 def get_flag() -> str:
